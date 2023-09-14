@@ -1,0 +1,15 @@
+{
+  "name": "tinysolutions/cpt-int",
+  "authors": [
+    {
+      "name": "TinySolutions",
+      "email": "wptinysolution@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "TinySolutions\\boilerplate\\": "app"
+    }
+  },
+  "description": ""
+}
