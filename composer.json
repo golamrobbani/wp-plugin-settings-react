@@ -1,14 +1,14 @@
 {
-  "name": "tinysolutions/cpt-int",
+  "name": "mamunur105/wp-plugin-settings-react",
   "authors": [
     {
       "name": "TinySolutions",
-      "email": "wptinysolution@gmail.com"
+      "email": "rmamunur105@gmail.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "TinySolutions\\boilerplate\\": "app"
+      "BPR\\boilerplate\\": "app"
     }
   },
   "description": ""

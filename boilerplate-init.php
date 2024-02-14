@@ -2,7 +2,7 @@
 
 /**
  * @wordpress-plugin
- * Plugin Name:       Boilerplate - WordPress Plugin Settings Page With React
+ * Plugin Name:       Boilerplate - Settings Page With React ( Using wp-scripts )
  * Plugin URI:        https://wordpress.org/support/plugin/wp-plugin-boilerplate-react-with-mix
  * Description:       Boilerplate
  * Version:           0.0.1
@@ -30,7 +30,10 @@ define('BPR_URL', plugins_url('', BPR_FILE));
 
 define('BPR_ABSPATH', dirname(BPR_FILE));
 
+define( 'BPR_PATH', plugin_dir_path(BPR_FILE ) );
+
 /**
  * App Init.
  */
+
 require_once 'app/boilerplate.php';

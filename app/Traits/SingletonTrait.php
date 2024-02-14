@@ -3,7 +3,7 @@
  *
  */
 
-namespace TinySolutions\boilerplate\Traits;
+namespace BPR\boilerplate\Traits;
 
 // Do not allow directly accessing this file.
 if ( ! defined( 'ABSPATH' ) ) {

@@ -1,9 +1,9 @@
 <?php
 
-namespace TinySolutions\boilerplate\Controllers;
+namespace BPR\boilerplate\Controllers;
 
-use TinySolutions\boilerplate\Traits\SingletonTrait;
-use TinySolutions\boilerplate\Helpers\Fns;
+use BPR\boilerplate\Traits\SingletonTrait;
+use BPR\boilerplate\Helpers\Fns;
 // Do not allow directly accessing this file.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
@@ -100,9 +100,6 @@ class Dependencies {
 	 * Admin Notice For Required PHP Version
 	 */
 	public function minimum_php_version() {
-		if ( isset( $_GET['activate'] ) ) {
-			unset( $_GET['activate'] );
-		}
 		$message = sprintf(
 		/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'boilerplate' ),

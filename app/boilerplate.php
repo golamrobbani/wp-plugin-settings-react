@@ -9,18 +9,18 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
 }
-require_once __DIR__ . './../vendor/autoload.php';
+require_once BPR_PATH . 'vendor/autoload.php';
 
-use TinySolutions\boilerplate\Traits\SingletonTrait;
-use TinySolutions\boilerplate\Controllers\Installation;
-use TinySolutions\boilerplate\Controllers\Dependencies;
-use TinySolutions\boilerplate\Controllers\AssetsController;
-use TinySolutions\boilerplate\Controllers\Hooks\FilterHooks;
-use TinySolutions\boilerplate\Controllers\Hooks\ActionHooks;
-use TinySolutions\boilerplate\Controllers\Admin\AdminMenu;
-use TinySolutions\boilerplate\Controllers\Admin\Api;
-use TinySolutions\boilerplate\Controllers\Admin\RegisterPostAndTax;
-use TinySolutions\boilerplate\Controllers\Admin\Review;
+use BPR\boilerplate\Traits\SingletonTrait;
+use BPR\boilerplate\Controllers\Installation;
+use BPR\boilerplate\Controllers\Dependencies;
+use BPR\boilerplate\Controllers\AssetsController;
+use BPR\boilerplate\Controllers\Hooks\FilterHooks;
+use BPR\boilerplate\Controllers\Hooks\ActionHooks;
+use BPR\boilerplate\Controllers\Admin\AdminMenu;
+use BPR\boilerplate\Controllers\Admin\Api;
+use BPR\boilerplate\Controllers\Admin\RegisterPostAndTax;
+use BPR\boilerplate\Controllers\Admin\Review;
 
 if ( ! class_exists( Cptint::class ) ) {
 	/**
@@ -62,9 +62,9 @@ if ( ! class_exists( Cptint::class ) ) {
 			add_action( 'init', [ $this, 'language' ] );
 			add_action( 'plugins_loaded', [ $this, 'init' ], 100 );
 			// Register Plugin Active Hook.
-			register_activation_hook( CPTINIT_FILE, [ Installation::class, 'activate' ] );
+			register_activation_hook( BPR_FILE, [ Installation::class, 'activate' ] );
 			// Register Plugin Deactivate Hook.
-			register_deactivation_hook( CPTINIT_FILE, [ Installation::class, 'deactivation' ] );
+			register_deactivation_hook( BPR_FILE, [ Installation::class, 'deactivation' ] );
 
         }
 
@@ -77,7 +77,7 @@ if ( ! class_exists( Cptint::class ) ) {
 		 */
 		public function get_assets_uri( $file ) {
 			$file = ltrim( $file, '/' );
-			return trailingslashit( CPTINIT_URL . '/assets' ) . $file;
+			return trailingslashit( BPR_URL . '/assets' ) . $file;
 		}
 
 		/**
@@ -95,14 +95,14 @@ if ( ! class_exists( Cptint::class ) ) {
 		 * @return string
 		 */
 		public function plugin_path() {
-			return untrailingslashit( plugin_dir_path( CPTINIT_FILE ) );
+			return untrailingslashit( plugin_dir_path( BPR_FILE ) );
 		}
 
 		/**
 		 * Load Text Domain
 		 */
 		public function language() {
-			load_plugin_textdomain( 'boilerplate', false, CPTINIT_ABSPATH . '/languages/' );
+			load_plugin_textdomain( 'boilerplate', false, BPR_ABSPATH . '/languages/' );
 		}
 
 		/**

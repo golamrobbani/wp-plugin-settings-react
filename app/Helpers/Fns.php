@@ -5,7 +5,7 @@
  * @package  TinySolutions\boilerplate
  */
 
-namespace TinySolutions\boilerplate\Helpers;
+namespace BPR\boilerplate\Helpers;
 
 // Do not allow directly accessing this file.
 if ( ! defined( 'ABSPATH' ) ) {

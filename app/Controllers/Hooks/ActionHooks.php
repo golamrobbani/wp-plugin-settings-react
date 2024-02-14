@@ -5,7 +5,7 @@
  * @package TinySolutions\boilerplate
  */
 
-namespace TinySolutions\boilerplate\Controllers\Hooks;
+namespace BPR\boilerplate\Controllers\Hooks;
 
 defined( 'ABSPATH' ) || exit();
 

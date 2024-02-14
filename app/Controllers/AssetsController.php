@@ -1,92 +1,97 @@
 <?php
 
-namespace TinySolutions\boilerplate\Controllers;
+namespace BPR\boilerplate\Controllers;
 
-use TinySolutions\boilerplate\Traits\SingletonTrait;
+use BPR\boilerplate\Traits\SingletonTrait;
 
 // Do not allow directly accessing this file.
-if (!defined('ABSPATH')) {
-    exit('This script cannot be accessed directly.');
+if ( ! defined( 'ABSPATH' ) ) {
+	exit( 'This script cannot be accessed directly.' );
 }
 
 /**
  * AssetsController
  */
-class AssetsController
-{
-    /**
-     * Singleton
-     */
-    use SingletonTrait;
+class AssetsController {
 
-    /**
-     * Plugin version
-     *
-     * @var string
-     */
-    private $version;
+	/**
+	 * Singleton
+	 */
+	use SingletonTrait;
 
-    /**
-     * Ajax URL
-     *
-     * @var string
-     */
-    private $ajaxurl;
+	/**
+	 * Plugin version
+	 *
+	 * @var string
+	 */
+	private $version;
 
-    /**
-     * Class Constructor
-     */
-    public function __construct()
-    {
-        $this->version = (defined('WP_DEBUG') && WP_DEBUG) ? time() : CPTINIT_VERSION;
-        /**
-         * Admin scripts.
-         */
-        add_action('admin_enqueue_scripts', [$this, 'backend_assets'], 1);
-    }
+	/**
+	 * Ajax URL
+	 *
+	 * @var string
+	 */
+	private $ajaxurl;
+
+	/**
+	 * Class Constructor
+	 */
+	public function __construct() {
+		$this->version = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : BPR_VERSION;
+		/**
+		 * Admin scripts.
+		 */
+		add_action( 'admin_enqueue_scripts', [ $this, 'backend_assets' ], 1 );
+	}
 
 
-    /**
-     * Registers Admin scripts.
-     *
-     * @return void
-     */
-    public function backend_assets($hook)
-    {
-        $script_block_asset_path = CPTINIT_ABSPATH . '/assets/js/backend/main.asset.php';
-        $script_block_dependencies = require($script_block_asset_path);
-        $scripts = [
-            [
-                'handle' => 'boilerplate-settings',
-                'src' => boilerplate()->get_assets_uri('js/backend/main.js'),
-                'deps' => $script_block_dependencies['dependencies'],
-                'footer' => true,
-            ]
-        ];
+	/**
+	 * Registers Admin scripts.
+	 *
+	 * @return void
+	 */
+	public function backend_assets( $hook ) {
+		$script_block_asset_path = BPR_ABSPATH . '/assets/js/backend/main.asset.php';
+		if ( file_exists( $script_block_asset_path ) ) {
+			$script_block_dependencies = require $script_block_asset_path;
+		} else {
+			$script_block_dependencies = [
+				'dependencies' => [],
+			];
+		}
 
-        // Register public scripts.
-        foreach ($scripts as $script) {
-            wp_register_script($script['handle'], $script['src'], $script['deps'], $this->version, $script['footer']);
-        }
+		$scripts = [
+			[
+				'handle' => 'boilerplate-settings',
+				'src'    => boilerplate()->get_assets_uri( 'js/backend/main.js' ),
+				'deps'   => $script_block_dependencies['dependencies'],
+				'footer' => true,
+			],
+		];
 
-        $current_screen =  get_current_screen();
+		// Register public scripts.
+		foreach ( $scripts as $script ) {
+			wp_register_script( $script['handle'], $script['src'], $script['deps'], $this->version, $script['footer'] );
+		}
 
-        if (isset($current_screen->id) && 'toplevel_page_boilerplate-admin' === $current_screen->id) {
+		$current_screen = get_current_screen();
 
-            wp_enqueue_style('boilerplate-settings');
-            wp_enqueue_script('boilerplate-settings');
+		if ( isset( $current_screen->id ) && 'toplevel_page_boilerplate-admin' === $current_screen->id ) {
 
-            wp_localize_script(
-                'boilerplate-settings',
-                'boilerplateParams',
-                [
-                    'ajaxUrl' => esc_url(admin_url('admin-ajax.php')),
-                    'adminUrl' => esc_url(admin_url()),
-                    'restApiUrl' => esc_url_raw(rest_url()), // site_url(rest_get_url_prefix()),
-                    'rest_nonce' => wp_create_nonce('wp_rest'),
-                    boilerplate()->nonceId => wp_create_nonce(boilerplate()->nonceId),
-                ]
-            );
-        }
-    }
+			wp_enqueue_style( 'boilerplate-settings' );
+			wp_enqueue_script( 'boilerplate-settings' );
+
+			wp_localize_script(
+				'boilerplate-settings',
+				'boilerplateParams',
+				[
+					'ajaxUrl'              => esc_url( admin_url( 'admin-ajax.php' ) ),
+					'adminUrl'             => esc_url( admin_url() ),
+					'restApiUrl'           => esc_url_raw( rest_url() ), // site_url(rest_get_url_prefix()),
+					'rest_nonce'           => wp_create_nonce( 'wp_rest' ),
+					boilerplate()->nonceId => wp_create_nonce( boilerplate()->nonceId ),
+				]
+			);
+		}
+	}
 }
