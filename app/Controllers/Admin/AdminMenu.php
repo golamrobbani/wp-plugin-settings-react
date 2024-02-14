@@ -58,7 +58,8 @@ class AdminMenu {
 			<div id="boilerplate_root">
 				<p>Js error Occurred</p>
 				<code> yarn install </code> OR <code> npm run install </code> To install package <br/>
-				<code> yarn watch </code> OR <code> npm run watch </code> to compile js file
+				<code> yarn watch </code> OR <code> npm run watch </code> to compile js file <br/>
+                <code> yarn zip</code> OR <code> npm run zip</code> to create a package with production zip file ready
 			</div>
 		</div>
 		<?php

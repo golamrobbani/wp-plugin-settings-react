@@ -6,7 +6,7 @@
   "author": "Mamunur Rashid <30565480+mamunur105@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "start": "wp-scripts start --entry ./src/admin-settings.jsx --output-path=assets/js/backend",
+    "start": "wp-scripts start",
     "clean": "rm -rf assets/*",
     "cleanmap": "rm -rf assets/**/**/*.map",
     "zip": "wp-scripts plugin-zip"
@@ -32,6 +32,8 @@
     "@ant-design/icons": "^5.3.0",
     "antd": "^5.14.1",
     "axios": "^1.6.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "toastr": "^2.1.4"
   },
   "devDependencies": {
