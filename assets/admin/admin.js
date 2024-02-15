@@ -26760,10 +26760,10 @@ Schema.validators = validators;
 
 /***/ }),
 
-/***/ "./src/Component/App.jsx":
-/*!*******************************!*\
-  !*** ./src/Component/App.jsx ***!
-  \*******************************/
+/***/ "./src/admin/Component/App.jsx":
+/*!*************************************!*\
+  !*** ./src/admin/Component/App.jsx ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26774,12 +26774,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
-/* harmony import */ var _Utils_Data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/Data */ "./src/Utils/Data.js");
-/* harmony import */ var _Utils_actionType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Utils/actionType */ "./src/Utils/actionType.js");
-/* harmony import */ var _Settings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Settings */ "./src/Component/Settings.jsx");
-/* harmony import */ var _NeedSupport__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NeedSupport */ "./src/Component/NeedSupport.jsx");
-/* harmony import */ var _MainHeader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MainHeader */ "./src/Component/MainHeader.jsx");
-/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Utils/StateProvider */ "./src/Utils/StateProvider.jsx");
+/* harmony import */ var _Utils_Data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/Data */ "./src/admin/Utils/Data.js");
+/* harmony import */ var _Utils_actionType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Utils/actionType */ "./src/admin/Utils/actionType.js");
+/* harmony import */ var _Settings__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Settings */ "./src/admin/Component/Settings.jsx");
+/* harmony import */ var _NeedSupport__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NeedSupport */ "./src/admin/Component/NeedSupport.jsx");
+/* harmony import */ var _MainHeader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MainHeader */ "./src/admin/Component/MainHeader.jsx");
+/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Utils/StateProvider */ "./src/admin/Utils/StateProvider.jsx");
 
 
 
@@ -26852,10 +26852,10 @@ function App() {
 
 /***/ }),
 
-/***/ "./src/Component/MainHeader.jsx":
-/*!**************************************!*\
-  !*** ./src/Component/MainHeader.jsx ***!
-  \**************************************/
+/***/ "./src/admin/Component/MainHeader.jsx":
+/*!********************************************!*\
+  !*** ./src/admin/Component/MainHeader.jsx ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26869,8 +26869,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/menu/index.js");
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/SettingOutlined.js");
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ant-design/icons */ "./node_modules/@ant-design/icons/es/icons/ContactsOutlined.js");
-/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/StateProvider */ "./src/Utils/StateProvider.jsx");
-/* harmony import */ var _Utils_actionType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Utils/actionType */ "./src/Utils/actionType.js");
+/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/StateProvider */ "./src/admin/Utils/StateProvider.jsx");
+/* harmony import */ var _Utils_actionType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Utils/actionType */ "./src/admin/Utils/actionType.js");
 
 
 
@@ -26938,10 +26938,10 @@ function MainHeader() {
 
 /***/ }),
 
-/***/ "./src/Component/NeedSupport.jsx":
-/*!***************************************!*\
-  !*** ./src/Component/NeedSupport.jsx ***!
-  \***************************************/
+/***/ "./src/admin/Component/NeedSupport.jsx":
+/*!*********************************************!*\
+  !*** ./src/admin/Component/NeedSupport.jsx ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26951,8 +26951,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/StateProvider */ "./src/Utils/StateProvider.jsx");
-/* harmony import */ var _Utils_Loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Utils/Loader */ "./src/Utils/Loader.jsx");
+/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/StateProvider */ "./src/admin/Utils/StateProvider.jsx");
+/* harmony import */ var _Utils_Loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Utils/Loader */ "./src/admin/Utils/Loader.jsx");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
 
@@ -27015,10 +27015,10 @@ function NeedSupport() {
 
 /***/ }),
 
-/***/ "./src/Component/Settings.jsx":
-/*!************************************!*\
-  !*** ./src/Component/Settings.jsx ***!
-  \************************************/
+/***/ "./src/admin/Component/Settings.jsx":
+/*!******************************************!*\
+  !*** ./src/admin/Component/Settings.jsx ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -27028,15 +27028,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/StateProvider */ "./src/Utils/StateProvider.jsx");
-/* harmony import */ var _Utils_Loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Utils/Loader */ "./src/Utils/Loader.jsx");
+/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utils/StateProvider */ "./src/admin/Utils/StateProvider.jsx");
+/* harmony import */ var _Utils_Loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Utils/Loader */ "./src/admin/Utils/Loader.jsx");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/input/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/layout/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/typography/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/form/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/divider/index.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd */ "./node_modules/antd/es/button/index.js");
-/* harmony import */ var _Utils_actionType__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Utils/actionType */ "./src/Utils/actionType.js");
+/* harmony import */ var _Utils_actionType__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Utils/actionType */ "./src/admin/Utils/actionType.js");
 
 
 
@@ -27116,10 +27116,10 @@ function Settings() {
 
 /***/ }),
 
-/***/ "./src/Utils/Data.js":
-/*!***************************!*\
-  !*** ./src/Utils/Data.js ***!
-  \***************************/
+/***/ "./src/admin/Utils/Data.js":
+/*!*********************************!*\
+  !*** ./src/admin/Utils/Data.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -27175,10 +27175,10 @@ const getOptions = async () => {
 
 /***/ }),
 
-/***/ "./src/Utils/Loader.jsx":
-/*!******************************!*\
-  !*** ./src/Utils/Loader.jsx ***!
-  \******************************/
+/***/ "./src/admin/Utils/Loader.jsx":
+/*!************************************!*\
+  !*** ./src/admin/Utils/Loader.jsx ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -27221,10 +27221,10 @@ function Loader() {
 
 /***/ }),
 
-/***/ "./src/Utils/StateProvider.jsx":
-/*!*************************************!*\
-  !*** ./src/Utils/StateProvider.jsx ***!
-  \*************************************/
+/***/ "./src/admin/Utils/StateProvider.jsx":
+/*!*******************************************!*\
+  !*** ./src/admin/Utils/StateProvider.jsx ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -27250,10 +27250,10 @@ const useStateValue = () => (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(St
 
 /***/ }),
 
-/***/ "./src/Utils/actionType.js":
-/*!*********************************!*\
-  !*** ./src/Utils/actionType.js ***!
-  \*********************************/
+/***/ "./src/admin/Utils/actionType.js":
+/*!***************************************!*\
+  !*** ./src/admin/Utils/actionType.js ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -27267,10 +27267,10 @@ const UPDATE_OPTIONS = 'UPDATE_OPTIONS';
 
 /***/ }),
 
-/***/ "./src/Utils/reducer.js":
-/*!******************************!*\
-  !*** ./src/Utils/reducer.js ***!
-  \******************************/
+/***/ "./src/admin/Utils/reducer.js":
+/*!************************************!*\
+  !*** ./src/admin/Utils/reducer.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -27279,7 +27279,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   initialState: () => (/* binding */ initialState)
 /* harmony export */ });
-/* harmony import */ var _actionType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actionType */ "./src/Utils/actionType.js");
+/* harmony import */ var _actionType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actionType */ "./src/admin/Utils/actionType.js");
 /* global rtsbParams */
 
 
@@ -47003,16 +47003,16 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!********************************!*\
-  !*** ./src/admin-settings.jsx ***!
-  \********************************/
+/*!**************************************!*\
+  !*** ./src/admin/admin-settings.jsx ***!
+  \**************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _Component_App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Component/App */ "./src/Component/App.jsx");
-/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Utils/StateProvider */ "./src/Utils/StateProvider.jsx");
-/* harmony import */ var _Utils_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Utils/reducer */ "./src/Utils/reducer.js");
+/* harmony import */ var _Component_App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Component/App */ "./src/admin/Component/App.jsx");
+/* harmony import */ var _Utils_StateProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Utils/StateProvider */ "./src/admin/Utils/StateProvider.jsx");
+/* harmony import */ var _Utils_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Utils/reducer */ "./src/admin/Utils/reducer.js");
 
 
 
