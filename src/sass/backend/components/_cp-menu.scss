@@ -1,0 +1,12 @@
+div#rtcl-template-tabs-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	padding-bottom: 5px;
+	.nav-tab {
+		margin-left: 0;
+		padding: 5px 20px;
+		font-size: 12px;
+		border: 1px solid #c3c4c7;
+	}
+}

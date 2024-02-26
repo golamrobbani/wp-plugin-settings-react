@@ -89,6 +89,7 @@ class AssetsController {
 					'adminUrl'             => esc_url( admin_url() ),
 					'restApiUrl'           => esc_url_raw( rest_url() ), // site_url(rest_get_url_prefix()),
 					'rest_nonce'           => wp_create_nonce( 'wp_rest' ),
+					// 'sections'   => Settings::instance()->get_sections(),
 					boilerplate()->nonceId => wp_create_nonce( boilerplate()->nonceId ),
 				]
 			);

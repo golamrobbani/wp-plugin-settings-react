@@ -1,0 +1,31 @@
+/**
+ * Component: Button
+ */
+.rtsb-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	font-size: 15px;
+	padding: 10px 16px;
+	font-weight: 500;
+	border-radius: 4px;
+	color: #fff;
+	border: none;
+	background: $admin-color-primary;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	height: auto;
+	line-height: 1.57;
+
+	&:focus {
+		box-shadow: none;
+		outline: 0;
+	}
+
+	&:hover {
+		background: $admin-color-primary;
+		color: #fff;
+	}
+}

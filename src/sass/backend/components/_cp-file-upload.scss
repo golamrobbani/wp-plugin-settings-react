@@ -1,0 +1,67 @@
+
+
+.shopbuilder_page_rtsb-settings{
+	.rtsb-image-preview-modal{
+		.ant-modal-content {
+			.ant-modal-header {
+				padding: 15px;
+			}
+			.ant-modal-body{
+				min-height: 100% !important;
+			}
+		}
+	}
+}
+
+.image-preview-overlay{
+	position: absolute;
+	z-index: 99;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	height: calc(100% - 20px);
+	width: calc(100% - 20px);
+	border-radius: 8px;
+	margin-inline-end: 8px;
+	margin-bottom: 8px;
+	color: rgba(255,255,255,.65);
+	transition: 0.3s all;
+	visibility: hidden;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	.anticon{
+		&:hover{
+			color: #fff;
+		}
+	}
+}
+.rtsb-field-upload-wrapper{
+	&:hover{
+		.image-preview-overlay {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	.ant-upload-list-item-container + .ant-upload-list-item-container{
+		display:none !important;
+	}
+	.ant-upload-list-item-container + .ant-upload-select{
+		display:none !important;
+	}
+
+	.rtsb-avatar-deleted{
+		.ant-upload-list-item-container {
+			display:none !important;
+		}
+		.ant-upload-list-item-container + .ant-upload-select{
+			display: inline-block !important;
+		}
+	}
+
+	.ant-upload-select{
+		overflow: hidden;
+		border: 1px solid #d9d9d9;
+	}
+}
+
