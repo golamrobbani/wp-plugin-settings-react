@@ -53,6 +53,22 @@ class Fns {
 		$options  = get_option( 'boilerplate_settings' );
 		return wp_parse_args( $options, $defaults );
 	}
-
+	
+	/**
+	 * @param $data
+	 *
+	 * @return mixed|string
+	 */
+	public static function stripslashes_value( $data ) {
+		if ( is_string( $data ) && strpos( $data, '\\' ) !== false ) {
+			return stripslashes( $data );
+		} elseif ( is_array( $data ) ) {
+			foreach ( $data as $key => $value ) {
+				$data[ $key ] = self::stripslashes_value( $value );
+			}
+		}
+		
+		return $data;
+	}
 
 }

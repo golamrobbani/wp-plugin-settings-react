@@ -2,6 +2,7 @@
 
 namespace BPR\boilerplate\Controllers;
 
+use BPR\boilerplate\Models\Settings;
 use BPR\boilerplate\Traits\SingletonTrait;
 
 // Do not allow directly accessing this file.
@@ -51,7 +52,7 @@ class AssetsController {
 	 * @return void
 	 */
 	public function backend_assets( $hook ) {
-		$script_block_asset_path = BPR_ABSPATH . '/assets/js/backend/main.asset.php';
+		$script_block_asset_path = BPR_ABSPATH . '/admin/main.asset.php';
 		if ( file_exists( $script_block_asset_path ) ) {
 			$script_block_dependencies = require $script_block_asset_path;
 		} else {
@@ -63,7 +64,7 @@ class AssetsController {
 		$scripts = [
 			[
 				'handle' => 'boilerplate-settings',
-				'src'    => boilerplate()->get_assets_uri( 'js/backend/main.js' ),
+				'src'    => boilerplate()->get_assets_uri( 'admin/admin.js' ),
 				'deps'   => $script_block_dependencies['dependencies'],
 				'footer' => true,
 			],
@@ -77,7 +78,6 @@ class AssetsController {
 		$current_screen = get_current_screen();
 
 		if ( isset( $current_screen->id ) && 'toplevel_page_boilerplate-admin' === $current_screen->id ) {
-
 			wp_enqueue_style( 'boilerplate-settings' );
 			wp_enqueue_script( 'boilerplate-settings' );
 
@@ -87,12 +87,13 @@ class AssetsController {
 				[
 					'ajaxUrl'              => esc_url( admin_url( 'admin-ajax.php' ) ),
 					'adminUrl'             => esc_url( admin_url() ),
-					'restApiUrl'           => esc_url_raw( rest_url() ), // site_url(rest_get_url_prefix()),
+					'restApiUrl'           => esc_url_raw( rest_url() ),
 					'rest_nonce'           => wp_create_nonce( 'wp_rest' ),
-					// 'sections'   => Settings::instance()->get_sections(),
+					'sections'             => Settings::instance()->get_sections(),
 					boilerplate()->nonceId => wp_create_nonce( boilerplate()->nonceId ),
 				]
 			);
 		}
 	}
 }
+

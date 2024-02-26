@@ -23,7 +23,7 @@ define( 'BPR_PATH', plugin_dir_path(BPR_FILE ) );
 
 ***Js Compiler wp-scripts***
 
-* ```yarn install``` OR ```npm run install```  To install package 
+* ```yarn install``` OR ```npm install```  To install package 
 * ```yarn start``` OR ```npm run start``` to compile js file
 * ```yarn zip``` OR ```npm run zip``` to create a package with production zip file ready
 

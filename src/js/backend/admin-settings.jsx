@@ -9,7 +9,7 @@ import { StateProvider } from './admin/utils/StateProvider';
 import reducer, { initialState } from './admin/utils/reducer';
 
 // Container
-const container = document.getElementById('rtsb-admin-app');
+const container = document.getElementById('boilerplate_root');
 
 // Root
 const root = ReactDOM.createRoot(container);

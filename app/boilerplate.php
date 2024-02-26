@@ -40,13 +40,13 @@ if ( ! class_exists( Cptint::class ) ) {
 		 *
 		 * @var string
 		 */
-//		public $current_theme;
-        /**
-         * Post Type.
-         *
-         * @var string
-         */
-        public $category = 'boilerplate_category';
+		// public $current_theme;
+		/**
+		 * Post Type.
+		 *
+		 * @var string
+		 */
+		public $category = 'boilerplate_category';
 		/**
 		 * Singleton
 		 */
@@ -65,8 +65,7 @@ if ( ! class_exists( Cptint::class ) ) {
 			register_activation_hook( BPR_FILE, [ Installation::class, 'activate' ] );
 			// Register Plugin Deactivate Hook.
 			register_deactivation_hook( BPR_FILE, [ Installation::class, 'deactivation' ] );
-
-        }
+		}
 
 		/**
 		 * Assets url generate with given assets file
@@ -117,13 +116,13 @@ if ( ! class_exists( Cptint::class ) ) {
 
 			do_action( 'boilerplate/before_loaded' );
 
-            Review::instance();
+			Review::instance();
 			// Include File.
-            AssetsController::instance();
-            AdminMenu::instance();
-            FilterHooks::init_hooks();
+			AssetsController::instance();
+			AdminMenu::instance();
+			FilterHooks::init_hooks();
 			ActionHooks::init_hooks();
-            Api::instance();
+			Api::instance();
 
 			do_action( 'boilerplate/after_loaded' );
 		}

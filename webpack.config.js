@@ -5,8 +5,8 @@ module.exports = {
     ...defaults,
 
     entry: {
-        'admin/admin':'./src/admin/admin-settings.jsx',
-        'frontend/frontend':'./src/frontend/index.jsx',
+        'admin/admin':'./src/js/backend/admin-settings.jsx',
+        'frontend/frontend':'./src/js/frontend/index.jsx',
     },
 
     output: {
